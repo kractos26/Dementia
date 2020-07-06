@@ -1,0 +1,32 @@
+<div class="auth-wrapper d-flex no-block justify-content-center ">
+    <div class="auth-box">
+        <div>
+            <app-alerta *ngIf="mensaje?.length > 0"  [alerts] = "mensaje"></app-alerta>
+            <div class="logo">
+                <span class="db"></span>
+                <h5 class="font-medium m-b-20">Ingrese el código que le llego a su {{tipo}} </h5>
+            </div>
+            <!-- Form -->
+            <div class="row">
+                <div class="col-12">
+                    <form [formGroup]="formularioConfirm" (submit)="validarCode()"  class="form-horizontal m-t-20" >
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <input  [(ngModel)]="validate" formControlName="code" class="form-control form-control-lg" type="" required="" placeholder="Code">
+                                <div *ngIf="f.code.invalid && (f.code.dirty || f.code.touched)" class="alert alert-danger">
+                                    <div *ngIf="f.code.errors.required"> code is required. </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <div class="col-xs-12 p-b-20">
+                                <button class="btn btn-block btn-lg btn-info" type="submit">VALIDAR</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+
+
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown ReservasMenu" ngbDropdown placement="bottom-right" >
+                        <a ngbDropdownToggle class="nav-link dropdown-toggle waves-effect waves-dark" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                            <i class="mdi mdi-cart-plus font-22"></i>
+                            <span *ngIf="InfoReservas?.length > 0" class="badge badge-pill badge-info noti">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">{{InfoReservas?.length}}</font>
+                                </font>
+                            </span>
+                        </a>
+                        <div *ngIf="InfoReservas?.length > 0" class="dropdown-menu dropdown-menu mailbox animated bounceInDown" ngbDropdownMenu>
+                            <span class="with-arrow">
+                                <span class="bg-primary"></span>
+                            </span>
+                            <ul class="list-style-none">
+                                <li>
+                                    <div class="drop-title bg-primary text-white">
+                                        <h4 class="m-b-0 m-t-5">{{TituloReservas}}</h4>
+                                        <span class="font-light">Reservas Pendientes</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="message-center notifications" >
+                                        <a (click)="IniciarReserva(reserva.IdService, reserva.Tipo);" href="javascript:void(0)" class="message-item" *ngFor="let reserva of InfoReservas">
+                                            <span class="btn btn-circle btn-danger">
+                                                <i class="mdi mdi-cart-outline"></i>
+                                            </span>
+                                            <span class="mail-contnet">
+                                                <h5 class="message-title">{{reserva.Titulo}}</h5>
+                                                <span class="mail-desc">{{reserva.Tipo}}</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>

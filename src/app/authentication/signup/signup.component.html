@@ -1,0 +1,123 @@
+<div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(assets/images/big/auth-bg.jpg) no-repeat center center;">
+    <div class="auth-box">
+        <div>
+            <div class="logo">
+                <span class="db"><img src="assets/images/Logotipo_bricks4us-8.png" alt="logo" width="135" height="45" /></span>
+                <h5 class="font-medium m-b-20">Registrarse</h5>
+            </div>
+            <!-- Form -->
+
+            <div class="row">
+                 <form [formGroup]="formularioSingUp" (submit)="registerUser()" style="width:100%;">
+                    <app-alerta *ngIf="mensaje?.length > 0"  [alerts] = "mensaje"></app-alerta>
+                    <div class="col-12">
+                        <div class="form-horizontal m-t-20">
+                            <div class="form-group row ">
+                                <div class="col-12 ">
+                                    <input [ngClass]="{'is-invalid': (f.name.invalid && (f.name.dirty || f.name.touched))}" [(ngModel)]="user.Login" class="form-control form-control-lg" type="text"   placeholder="Nombre de Usuario" formControlName="name">
+                                    <span class="LabelOblitaorio">*</span>
+                                    <div  *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="invalid-feedback">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Ingrese su nombre de usuario.</font>
+                                            <font style="vertical-align: inherit;">Por lo menos {{f.name.errors.minlength.requiredLength}} caracteres.</font>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-12 ">
+                                    <input [ngClass]="{'is-invalid': (f.email.invalid && (f.email.dirty || f.email.touched))}" [(ngModel)]="user.Email" class="form-control form-control-lg" type="email"   placeholder="Email"
+                                    formControlName="email">
+                                    <span class="LabelOblitaorio">*</span>
+                                    <div  *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="invalid-feedback">
+                                        <font style="vertical-align: inherit;">
+                                            <font *ngIf="f.email.errors.required" style="vertical-align: inherit;">Ingrese su dirección de correo electrónico.</font>
+                                            <font *ngIf="f.email.errors.email" style="vertical-align: inherit;">El correo ingresado no tiene el formato correcto.</font>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-12 ">
+                                    <input [ngClass]="{'is-invalid': (f.password.invalid && (f.password.dirty || f.password.touched))}" [(ngModel)]="user.Password" class="form-control form-control-lg" type="Password"   placeholder="Password" formControlName="password">
+                                    <span class="LabelOblitaorio">*</span>
+                                    <div  *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="invalid-feedback">
+                                        <font style="vertical-align: inherit;">
+                                            <font *ngIf="f.password.errors.required" style="vertical-align: inherit;">Ingrese su contraseña.</font>
+                                            <font *ngIf="f.password.errors.minlength" style="vertical-align: inherit;"> Debe tener al menos {{f.password.errors.minlength.requiredLength}} caracteres.</font>
+                                            <font *ngIf="f.password.errors.EvaluateStrength" style="vertical-align: inherit;">La contraseña ingresada no es lo suficientemente fuerte.</font>
+                                            <font *ngIf="f.password.errors.EvaluateStrength" style="vertical-align: inherit;">Mínimo 8 caracteres, mayúsculas, minúsculas, dígitos.</font>
+                                        </font>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-12 ">
+                                    <input [ngClass]="{'is-invalid': (f.confirmPassword.invalid && (f.confirmPassword.dirty || f.confirmPassword.touched))}" [(ngModel)]="confirmpassoword" class="form-control form-control-lg" type="password" required placeholder="Confirmar Password" formControlName="confirmPassword">
+                                    <span class="LabelOblitaorio">*</span>
+                                    <div  *ngIf="f.confirmPassword.invalid && (f.confirmPassword.dirty || f.confirmPassword.touched)" class="invalid-feedback">
+                                        <font style="vertical-align: inherit;">
+                                            <font *ngIf="f.confirmPassword.errors.required" style="vertical-align: inherit;">Ingrese su contraseña.</font>
+                                            <font *ngIf="f.confirmPassword.errors.MatchPassword" style="vertical-align: inherit;">La contraseña y su confirmación no coinciden</font>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input [ngClass]="{'is-invalid': (f.cell.invalid && (f.cell.dirty || f.cell.touched))}" [(ngModel)]="user.CellPhone" class="form-control form-control-lg" type="tel"  placeholder="Número celular" formControlName="cell">
+                                    <span class="LabelOblitaorio">*</span>
+                                    <div  *ngIf="f.cell.invalid && (f.cell.dirty || f.cell.touched)" class="invalid-feedback">
+                                        <font style="vertical-align: inherit;">
+                                            <font *ngIf="f.cell.errors.required" style="vertical-align: inherit;">Ingrese su número de celular.</font>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label *ngIf='user.IdCountry == "" || user.IdCountry == null' class="col-sm-3 control-label col-form-label p-t-0" style="color: #686161;font-weight: 400;font-size: 1.09375rem;height: 0px;padding-bottom: 0px;top:6px; position:relative; float: left;right: -7px;">Seleccione un país</label>
+                                    <select [ngClass]="{'is-invalid': (f.SelectCountry.invalid && (f.SelectCountry.dirty || f.SelectCountry.touched))}" [(ngModel)]="user.IdCountry"  class="form-control form-control-line" placeholder="País"  formControlName="SelectCountry">
+                                        <option  *ngFor="let itemcountry of country" value="{{itemcountry.IdCountry}}">{{itemcountry.Name}}</option>                    
+                                    </select>                             
+                                    <span class="LabelOblitaorio Select">*</span>       
+                                    <div  *ngIf="f.SelectCountry.invalid && (f.SelectCountry.dirty || f.SelectCountry.touched)" class="invalid-feedback">
+                                        <font style="vertical-align: inherit;">
+                                            <font *ngIf="f.SelectCountry.errors.required" style="vertical-align: inherit;">Seleccione un país de la lista.</font>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <div class="col-md-12 ">
+                                    <div class="custom-control custom-checkbox">
+                                        <input  [ngClass]="{'is-invalid': (f.terms.invalid && (f.terms.dirty || f.terms.touched))}" [(ngModel)]="user.TermAccepted" type="checkbox" class="custom-control-input" id="customCheck1"  formControlName="terms">
+                                        <label class="custom-control-label" for="customCheck1">Acepto los <a href="javascript:void(0)">Términos y Condiciones</a></label>
+                                        <div  *ngIf="f.terms.invalid && (f.terms.dirty || f.terms.touched)" class="invalid-feedback">
+                                            <font style="vertical-align: inherit;">
+                                                <font *ngIf="f.terms.errors.required" style="vertical-align: inherit;">Debe aceptar los términos y condiciones.</font>
+                                            </font>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-center ">
+                                <div class="col-xs-12 p-b-20 ">
+                                    <button class="btn btn-block btn-lg btn-info" type="submit" [disabled]="formularioSingUp.invalid" >Registrar</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-b-0 m-t-10 ">
+                                <div class="col-sm-12 text-center ">
+                                    Ya está registrado? <a href="#/authentication/login " class="text-info m-l-5 "><b>Iniciar Sesión</b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </form>
+            </div>
+        </div>
+    </div>
+</div>

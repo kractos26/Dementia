@@ -1,0 +1,42 @@
+th.ng2-smart-actions-title
+{
+    display: none;
+}
+
+.card-body.optionItem {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    padding-bottom: 00rem;
+    padding-top: 20px;
+}
+
+.image-options-list
+{
+    width: 30px!important;
+    height: 30px!important;
+    position: relative;
+    left: 5px !important;
+    top: -4px !important;
+    background-size: contain !important;
+}
+
+.image-options-list.inactive
+{
+    background: url("../../../assets/images/Yes_Check_Circle2.png");
+}
+
+.image-options-list.active
+{
+    background: url("../../../assets/images/Yes_Check_Circle1.png");
+}
+
+@media (min-width: 767px)
+{
+    .card-body.optionItem[_ngcontent-c5] {
+        padding: 1.25rem;
+        padding-bottom: 00rem;
+        padding-top: 20px;
+        width: 50%;
+        display: inline-block;
+    }
+}

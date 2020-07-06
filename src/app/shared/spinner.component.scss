@@ -1,0 +1,14 @@
+.page-loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  background: rgb(51, 51, 51);
+  /*background: linear-gradient(to right, #00e1f5 0, #0069e3 99%);*/
+  background: linear-gradient(to right, #000000 0, #000000 99%);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  z-index: 10000;
+}

@@ -1,0 +1,10 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Dementia",
+  "short_name": "Dementia",
+  "version": "io.dementiastore.movil",
+  "author": "DementiaStore",
+  "icons": [],
+  "start_url": "index.html"
+}

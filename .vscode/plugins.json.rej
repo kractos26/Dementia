@@ -1,0 +1,4 @@
+diff a/.vscode/plugins.json b/.vscode/plugins.json	(rejected hunks)
+@@ -0,0 +1 @@
++{"plugins":["cordova-plugin-whitelist","cordova-plugin-statusbar","cordova-plugin-device","cordova-plugin-splashscreen","cordova-plugin-ionic-webview","cordova-plugin-ionic-keyboard","cordova-plugin-camera","cordova-plugin-telerik-imagepicker","cordova-plugin-file","cordova-plugin-file-transfer"]}
+\ No newline at end of file

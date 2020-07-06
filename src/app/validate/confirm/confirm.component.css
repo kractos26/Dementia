@@ -1,0 +1,4 @@
+.auth-wrapper {
+  min-height: 0vh !important;
+  position: relative;
+}

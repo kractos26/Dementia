@@ -1,0 +1,44 @@
+<div class="auth-wrapper d-flex no-block justify-content-center align-items-center"  style="background:url(assets/images/big/auth-bg.jpg) no-repeat center center;">
+    <div class="auth-box">
+        <div id="loginform">
+            <div class="logo">
+                <span class="db"><img src="assets/images/Logotipo_bricks4us-8.png" alt="logo" width="135" height="45" /></span>
+                <h5 class="font-medium m-b-20">{{tipo}}</h5>
+                <app-alerta *ngIf="mensaje?.length > 0"  [alerts] = "mensaje"></app-alerta>
+            </div>
+            <!-- Form -->
+            <div class="row">
+                <div class="col-12">
+                    <form [formGroup]="formularioConfirm" (submit)="validarCode()"  class="form-horizontal m-t-20" >
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <h6 class="font-medium m-b-20">Ingrese el código de confirmación enviado a su {{tipo}}</h6>
+                                <input [ngClass]="{'is-invalid': (f.code.invalid && (f.code.dirty || f.code.touched))}" [(ngModel)]="validateCode" formControlName="code" class="form-control form-control-lg" type="" required="" placeholder="Código">
+                                <div  *ngIf="f.code.invalid && (f.code.dirty || f.code.touched)" class="invalid-feedback">
+                                    <font style="vertical-align: inherit;">
+                                        <font *ngIf="f.code.errors.required" style="vertical-align: inherit;">Ingrese el código de seguridad.</font>
+                                    </font>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <div class="col-xs-12 p-b-20">
+                                <button class="btn btn-block btn-lg btn-info" type="submit">Confirmar</button>
+                            </div>
+                        </div>
+                        <div class="form-group m-b-0 m-t-10">
+                            <div class="col-sm-12 text-center">
+                                <a  href="javascript:void(0)" (click)="GetSecurityCode()" class="text-info m-l-5"><b>Obtener nuevo código de activación</b></a>
+                            </div>
+                        </div>
+                        <div class="form-group m-b-0 m-t-10">
+                            <div class="col-sm-12 text-center">
+                                <a  href="javascript:void(0)" (click)="Logout()" class="text-info m-l-5"><b>Iniciar sesión con otro usuario</b></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

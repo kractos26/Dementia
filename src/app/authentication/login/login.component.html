@@ -1,0 +1,93 @@
+
+
+
+
+<div class="auth-wrapper d-flex no-block justify-content-center align-items-center"  style="background:url(assets/images/big/auth-bg.jpg) no-repeat center center;">
+    <div class="auth-box">
+        <div id="loginform" [ngClass]="{'d-none': recoverform}">
+            <div class="logo">
+                <span class="db"><img src="" alt="logo" width="135" height="45" /></span>
+                <h5 class="font-medium m-b-20">Iniciar Sesión</h5>
+                <app-alerta *ngIf="mensaje?.length > 0"  [alerts] = "mensaje"></app-alerta>
+            </div>
+            <!-- Form -->
+            <div class="row">
+                <div class="col-12">
+               
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="ti-user"></i></span>
+                        </div>
+                        <input [(ngModel)] = "usuario.Usuario" type="text" class="form-control form-control-lg" placeholder="Nombre de Usuario" aria-label="Username"  aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon2"><i class="ti-pencil"></i></span>
+                        </div>
+                        <input [(ngModel)] = "usuario.Password" type="password" class="form-control form-control-lg" placeholder="Contraseña" aria-label="Password"  aria-describedby="basic-addon1">
+                    </div>
+                    <div class="form-group text-center">
+                        <div class="col-xs-12 p-b-20">
+                            <button class="btn btn-block btn-lg btn-dark" (click)= "login()" type="submit" >Iniciar Sesión</button>
+                        </div>
+                    </div>
+                    <
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+                            <div class="social">
+                                
+                                <button  (click)="signInWithFB()" class="btn btn-facebook" data-toggle="tooltip" title="" data-original-title="Login with Facebook"> <i aria-hidden="true" class="fab fa-facebook"></i> </button>
+                                <!--<a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="" data-original-title="Login with Google"> <i aria-hidden="true" class="fab fa-google-plus"></i> </a>-->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group m-b-0 m-t-10">
+                        <div class="col-sm-12 text-center">
+                            Aun no tiene una cuenta? <a href="#/authentication/signup" class="text-info m-l-5"><b>Registrarse</b></a>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="recoverform" [ngClass]="{'d-block': recoverform}">
+            <form [formGroup]="formularioRecover" (submit)="recoverPwd()" style="width:100%;">
+                <app-alerta *ngIf="mensaje?.length > 0"  [alerts] = "mensaje"></app-alerta>
+                <div class="logo">
+                    <span class="db"><img src="assets/images/logo-icon.png" alt="logo" /></span>
+                    <h5 class="font-medium m-b-20">Recuperar contraseña</h5>
+                    <span>Ingrese su correo electrónico y las instrucciones serán enviadas a usted!</span>
+                </div>
+                <div class="row m-t-20">
+                    <!-- Form -->
+                    <div class="col-12">
+                        <!-- email -->
+                        <div class="form-group row">
+                            <div class="col-12">
+                                    <input [ngClass]="{'is-invalid': (f.emailreco.invalid && (f.emailreco.dirty || f.emailreco.touched))}" [(ngModel)]="usuario.Email" class="form-control form-control-lg" type="email"   placeholder="Email"
+                                    formControlName="emailreco">
+                                    <div  *ngIf="f.emailreco.invalid && (f.emailreco.dirty || f.emailreco.touched)" class="invalid-feedback">
+                                        <font style="vertical-align: inherit;">
+                                            <font *ngIf="f.emailreco.errors.required" style="vertical-align: inherit;">Ingrese su dirección de correo electrónico.</font>
+                                            <font *ngIf="f.emailreco.errors.email" style="vertical-align: inherit;">El correo ingresado no tiene el formato correcto.</font>
+                                        </font>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- pwd -->
+                        <div class="row m-t-20">
+                            <div class="col-12">
+                                <button class="btn btn-block btn-lg btn-danger" type="submit" name="action">Reinicar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+     
+
+ 
+   

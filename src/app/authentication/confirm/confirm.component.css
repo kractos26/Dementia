@@ -1,0 +1,22 @@
+.auth-wrapper {
+  min-height: 100vh !important;
+  position: relative;
+}
+
+.auth-wrapper {
+  /*background: url("assets/images/big/auth-bg.jpg") no-repeat center center;*/
+  background: url("assets/images/big/login3.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.auth-wrapper .auth-box 
+{
+  background: #00000078;
+  padding: 20px;
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 90%;
+  margin: 10% 0;
+  color: #d3c3c3;
+}

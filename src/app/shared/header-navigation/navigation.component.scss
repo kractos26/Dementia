@@ -1,0 +1,91 @@
+.badge {
+    font-weight: 300;
+    line-height: normal;
+    font-size: 70% !important;
+}
+
+.badge-info {
+    color: #fff;
+    background-color: #e42c2c;
+}
+
+.bg-primary {
+    background-color: #01baba !important;
+    background: linear-gradient(to right,#21edff 0,#2cc6ff 99%);
+    background: linear-gradient(to right, #00e1f5 0, #0069e3 99%);
+    background: linear-gradient(to right, #21edff 0, #0099d2 99%);
+}
+
+.bg-danger {
+    background-color: #fa5838 !important;
+    background: linear-gradient(to right,#21edff 0,#2cc6ff 99%);
+    background: linear-gradient(to right, #00e1f5 0, #0069e3 99%);
+}
+
+.nav-link.dropdown-toggle 
+{
+    /*color: #bac4e2 !important;*/
+    color: #dfe3ee !important
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+ul.navbar-nav div.dropdown-menu {
+    position: absolute;
+    width: 100%;
+    top: 63px!important;
+    left: 0px!important;
+}
+
+@media (min-width: 768px)
+{
+    ul.navbar-nav div.dropdown-menu {
+        position: absolute;
+        left: -114px !important;
+    }
+}
+
+.dropdown-item 
+{
+    padding: 12px 15px;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    line-height: 25px;
+}
+
+i.ItemMenuLateral
+{
+    font: 24px/1 "Material Design Icons";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+
+    font-style: normal;
+    width: 35px;
+    line-height: 25px;
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+i.ItemMenuLateral2
+{
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+
+    font-style: normal;
+    width: 35px;
+    line-height: 25px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+// http://ionicframework.com/docs/theming/
+/*
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+*/
+
+
+//@import '../src/assets/scss/custom.scss';
+//@import '../src/assets/scss/pages.scss';
+//@import '../src/assets/scss/responsive.scss';
+
+//@import '../src/assets/scss/variable.scss';
+@import '~@ionic/angular/assets/scss/style.scss';
+
+//This is for the icons (Required file)
+@import '~@ionic/angular/assets/scss/icons/font-awesome/css/fontawesome-all.css';
+@import '~@ionic/angular/assets/scss/icons/simple-line-icons/css/simple-line-icons.css';
+@import '~@ionic/angular/assets/scss/icons/weather-icons/css/weather-icons.min.css';
+@import '~@ionic/angular/assets/scss/icons/themify-icons/themify-icons.css';
+@import '~@ionic/angular/assets/scss/icons/flag-icon-css/flag-icon.min.css';
+@import "~@ionic/angular/assets/scss/icons/material-design-iconic-font/css/materialdesignicons.min.css";
+@import "~@ionic/angular/assets/scss/icons/crypto-icons/cryptocoins.css";

@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            
+            <div class="card-body" [ngClass]="{'SimpleStyle': (parameterRate?.IsSimpleStyle)}">
+                <ngb-rating [ngClass]="{'SimpleStyle': (parameterRate?.IsSimpleStyle)}" [(rate)]="currentRate" max="{{stars}}" [readonly]="parameterRate?.ReadOnly">
+                  <ng-template let-fill="fill">
+                      <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                  </ng-template>
+                </ngb-rating>
+                <span style="padding-left: 10px;font-weight: 500;" *ngIf="parameterRate?.InfoAdditional != ''">{{parameterRate?.InfoAdditional}}</span>
+                <div *ngIf="!parameterRate?.HideText" class="m-t-10">Calificacion: <b>{{currentRate}}</b></div>
+            </div>
+
+            <button *ngIf="parameterRate?.ShowButton" (click)="pasarstart($event)">Calificar</button>
+        </div>
+    </div>
+</div>
