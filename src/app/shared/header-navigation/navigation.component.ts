@@ -62,10 +62,10 @@ export class NavigationComponent implements OnInit {
       
       this.userfacebook = (userfb != null) ?userfb:this.userfacebook;
       this.loggedIn = this.userfacebook != null;
-      alert(this.loggedIn);
+    
     },error=>{
       
-      alert(error);
+     
           
     });
   }

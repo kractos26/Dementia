@@ -38,6 +38,15 @@ export const Approutes: Routes = [
       loadChildren : './ecommerce/ecom.module#EcomModule',
     },
     {
+        path:'card',
+        loadChildren : './cards/cards.module#CardsModule'
+    },
+    
+    {
+        path:'info',
+        loadChildren : './informacion-general/informacion-general.module#InformacionGeneralModule'
+    },
+    {
       path: 'validarcode',
       loadChildren : './validate/validate.module#ValidateModule',
       //canActivate: [GuardGuard]

@@ -33,5 +33,24 @@ export const ROUTES: RouteInfo[] =
         ],
         parmeter:{}
       },
+      {
+        path: '',
+        title: 'Informacion General',
+        icon: '',
+        class: 'has-arrow',
+        extralink: false,
+        submenu: [
+           {
+            path: '/info/QuienesSomos',
+            title: 'Dementia es',
+            icon: '',
+            class: '',
+            extralink: false,
+            submenu:[],
+            parmeter:{}
+           }
+        ],
+        parmeter:{}
+      }
     ];
   
