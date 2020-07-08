@@ -41,7 +41,7 @@ export class CacheStorageService
       }
       else{
         var infoArray : T[];
-        this.get<GenericResponse<T>>(UrlBackendServices + "/api/" + name).subscribe(respuesta=>
+       /* this.get<GenericResponse<T>>(UrlBackendServices + "/api/" + name).subscribe(respuesta=>
         {
           infoArray = respuesta.JSonResult;
           if(infoArray && infoArray != null)
@@ -51,7 +51,7 @@ export class CacheStorageService
         },
         error=>{
           onFinish(null);
-        });
+        });*/
       }
     }
 
