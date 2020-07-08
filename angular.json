@@ -15,14 +15,14 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/Dementia",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "index": "./src/index.html",
+            "main": "./src/main.ts",
+            "polyfills": "./src/polyfills.ts",
+            "tsConfig": "./src/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/assets",
+                "input": "./src/assets",
                 "output": "assets"
               },
               {
@@ -55,8 +55,8 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "src/assets/vendor/sparkline.js",
-              "src/assets/vendor/actionextern.js",
+              "./src/assets/vendor/sparkline.js",
+              "./src/assets/vendor/actionextern.js",
               "node_modules/moment/min/moment.min.js"
             ],
             "es5BrowserSupport": true
