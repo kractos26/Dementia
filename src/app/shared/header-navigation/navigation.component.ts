@@ -24,7 +24,19 @@ declare var $: any;
 })
 export class NavigationComponent implements OnInit {
 
-   userfacebook: SocialUser;
+   userfacebook: SocialUser = {
+    provider: "",
+    id: "",
+    email: "",
+    name: "",
+    photoUrl: "",
+    firstName: "",
+    lastName: "",
+    authToken: "",
+    idToken: "",
+    authorizationCode: ""
+   }
+
    loggedIn: boolean;
   public config: PerfectScrollbarConfigInterface = {};
   EsVistaServicios: boolean = false;
@@ -47,13 +59,10 @@ export class NavigationComponent implements OnInit {
      this.user =  this.storage.getCurrentUser();
    
      this.authService.authState.subscribe((userfb) => {
-     
-      this.userfacebook = userfb;
-      this.loggedIn = (userfb != null);
-      if(!this.loggedIn)
-      {
-        
-      }
+      
+      this.userfacebook = (userfb != null) ?userfb:this.userfacebook;
+      this.loggedIn = this.userfacebook != null;
+      alert(this.loggedIn);
     },error=>{
       
       alert(error);
