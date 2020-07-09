@@ -366,6 +366,33 @@
 <link rel="stylesheet" href="styles.1e1d610756ccf8eced8d.css"></head>
 
 <body>
+    <div id="fb-root">
+
+    </div>
+    <script type="text/javascript">
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v7.0'
+        });
+      };
+       
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="112883227152907"
+      theme_color="#000000"
+      logged_in_greeting="Saludo de prueba etapa de programación"
+      logged_out_greeting="Saludo de prueba etapa de programación">
+    </div>
     <app-root></app-root>
     
 <script type="text/javascript" src="runtime.5fac42b4e1626fb89a6b.js"></script><script type="text/javascript" src="es2015-polyfills.a83f74e280fe86270208.js" nomodule></script><script type="text/javascript" src="polyfills.33e99cd4de5fe62df1bc.js"></script><script type="text/javascript" src="scripts.04cad0807e07ddf26cd6.js"></script><script type="text/javascript" src="main.4f739fe40ce011a718f0.js"></script></body>
