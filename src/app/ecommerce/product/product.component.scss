@@ -1,11 +1,86 @@
 .distan 
 {
-    padding-left: 20px;
+    padding-left: 100px;
     padding-top: 20px;
 }
 
-img {
-    height: 300px !important;
-  
-    padding: 5px;
+img{
+   width: 200px; 
+   height: 200px;
 }
+
+
+  .id-card-wrapper {
+   
+    padding-left: 10px;
+    padding-top: 10px;
+    display: flex;
+  }
+  .id-card {
+    flex-basis: 100%;
+    max-width: 100%;
+    border: 1px solid rgb(97, 245, 245);
+    margin: auto;
+    color: #fff;
+    padding: 1em;
+    background-color: #0A2129;
+    box-shadow: 0px 0px 3px 1px #12a0a0, inset 0px 0px 3px 1px #12a0a0;
+  }
+  
+
+  
+  img {
+    max-width: 200px;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0px 0px 4px 3px #12a0a0;
+  }
+ 
+   .dp-arc-inner {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 6px solid transparent;
+    border-top-color: #0AE0DF;
+    border-radius: 50%;
+    top: -6px;
+    left: -6px;
+  
+    animation-duration: 2s;
+    animation-name: rotate-clock;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes rotate-clock {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+   .dp-arc-outer {
+    position: absolute;
+    width: calc(200px + 20px);
+    height: calc(200px + 20px);
+    border: 6px solid transparent;
+    border-bottom-color: #0AE0DF;
+    border-radius: 50%;
+    top: -16px;
+    left: -16px;
+  
+    animation-duration: 2s;
+    animation-name: rotate-anticlock;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes rotate-anticlock {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  

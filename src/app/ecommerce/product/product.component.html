@@ -1,18 +1,37 @@
 
-<div  class="row el-element-overlay distan" > 
-    <div   *ngFor="let element of elementos" class="col-lg-3 col-md-6" >
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="assets/images/product/img{{element}}.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Nombre</h5>
-              <p class="card-text">description</p>
-              <a  (click)="detallesProducto()" class="btn">Detalle</a>
+<div  class="row distan" > 
+    <div   *ngFor="let element of elementos"  >
+       <div class="col-md-12 col-xs-12">
+        <div class="id-card-wrapper">
+          <div class="id-card">
+            <div class="row">
+              
+                <div class="col-md-6 col-xs-6" >
+                  <div class="dp-arc-outer"></div>
+                  <div class="dp-arc-inner"></div>
+                  <img src="assets/images/product/img{{element}}.jpg" class="img-fluid"/>
+                </div>
+                <div class="col-md-6 col-xs-6" style="padding-left: 20px;">
+                  <h1>Nombre</h1>
+                      <p>Descripción del articulo 
+                      </p>
+                      <p><button  (click)="detallesProducto()" class="btn btn-info">Detalle</button></p>
+                </div>
+             
             </div>
+           
           </div>
-          
+        </div>
+       </div>
+     
          
     </div>
     
 
 
 </div>
+
+
+
+
+
