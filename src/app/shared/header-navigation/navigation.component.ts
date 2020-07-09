@@ -29,7 +29,7 @@ export class NavigationComponent implements OnInit {
     id: "",
     email: "",
     name: "",
-    photoUrl: "",
+    photoUrl: 'assets/images/users/avatar-default-icon.png',
     firstName: "",
     lastName: "",
     authToken: "",
