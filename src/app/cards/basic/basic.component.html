@@ -1,0 +1,12 @@
+mkdir messenger-webhook
+ // Crea un directorio de proyecto. cd messenger-webhook
+  // Navega al directorio nuevo. touch index.js
+   // Crea un archivo index.js vacío. npm init
+    // Crea un archivo package.json.
+     Acepta los valores predeterminados para todas las preguntas. 
+     npm install express body-parser --save 
+     // Instala el módulo del marco del servidor http express.js 
+     // y, luego, lo agrega a la sección de dependencias del archivo package.json.
+
+
+     curl -X GET "localhost:1337/webhook?hub.verify_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImp0aSI6IjRjYmViZWJhLTcyNDktNGQ5NS1iYjJmLTM1NWYwZTUwNzJkNyIsImlhdCI6MTU5NDE5ODY3NywiZXhwIjoxNTk0MjAyMjc3fQ.ialyRsjGhMyqQeTu3lIEyidBaWoY1I5xeizCe1g2puk&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe"

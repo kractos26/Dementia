@@ -1,3 +1,4 @@
+import { ChatComponent } from './chat/chat.component';
 
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -10,7 +11,8 @@ import { JsonpModule } from '@angular/http';
 import { CalificacionComponent } from './calificacion/calificacion.component';
 import { ListaSeleccionComponent } from './ListaSeleccion/ListaSeleccion.component';
 import { BackButtonComponent } from './BackButton/BackButton.component';
-import { ReservasNotificacionComponent } from 'src/app/utilidades/ReservasNotificacion/ReservasNotificacion.component';
+
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 //import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 //import { Ng2SmartTableModule } from 'ng2-smart-table';
 
@@ -23,7 +25,8 @@ import { ReservasNotificacionComponent } from 'src/app/utilidades/ReservasNotifi
     
     BackButtonComponent,
    
-    ReservasNotificacionComponent
+    
+    ChatComponent
   ],
   imports: [
     CommonModule,
@@ -31,9 +34,9 @@ import { ReservasNotificacionComponent } from 'src/app/utilidades/ReservasNotifi
     NgbModule,
     FileUploadModule,
     JsonpModule,
-    ReactiveFormsModule
-    //NgxDatatableModule,
-    //Ng2SmartTableModule
+    ReactiveFormsModule,
+    PerfectScrollbarModule
+    
   ],
   exports: [
     AlertaComponent,
@@ -41,7 +44,8 @@ import { ReservasNotificacionComponent } from 'src/app/utilidades/ReservasNotifi
     ListaSeleccionComponent,
     BackButtonComponent,
     
-    ReservasNotificacionComponent
+
+    ChatComponent
   ],
   providers: [],
   bootstrap: [ListaSeleccionComponent]

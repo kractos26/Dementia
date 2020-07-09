@@ -12,9 +12,12 @@ import { DetailsComponent } from './details/details.component';
 import { EditComponent } from './edit/edit.component';
 import { OrderComponent } from './orders/orders.component';
 import { ProductComponent } from './product/product.component';
+import { UtilidadesModule } from '../utilidades/utilidades.module';
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(EcomRoutes), FormsModule, NgbModule],
+  imports: [CommonModule, RouterModule.forChild(EcomRoutes), FormsModule, NgbModule,
+    UtilidadesModule
+  ],
   declarations: [
     CartComponent,
     CheckoutComponent,

@@ -1,0 +1,96 @@
+<!-- ============================================================== -->
+<!-- Left Part  -->
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- End Left Part  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Right Part  Mail Compose -->
+<!-- ============================================================== -->
+<div class="right-part">
+    <div class="card">
+        <div class="p-l-20 p-r-25 p-t-25 p-b-25 bg-info d-flex align-items-center dark-logo">
+            <div>
+                <img src="assets/images/logo-icon.png" width="45" alt="homepage" class=" rounded-circle" />
+
+            
+            </div>
+            <div class="text-white m-b-0 m-l-15 font-18"></div>
+            <div class="ml-auto">
+                <div ngbDropdown placement="bottom-right">
+                    <a ngbDropdownToggle class="text-white" href="javascript: void(0)" id="dropdownMenuLink">
+                        <i class="mdi mdi-dots-vertical font-20"></i>
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-t-0 p-r-0">
+            <div class="chat-box p-r-15" style="height:calc(100vh - 300px); position: relative;" [perfectScrollbar]="config">
+                <!--chat Row -->
+                <ul class="chat-list">
+                    <!--chat Row -->
+                    <li class="chat-item">
+                        
+                        <div class="chat-content">
+                            <h6 class="font-medium">{{selectedUser.name}}</h6>
+                            <div class="box bg-light-info">Mensaje de prueba</div>
+                        </div>
+                        <div class="chat-time">10:56 am</div>
+                    </li>
+                    <!--chat Row -->
+                    <li class="chat-item">
+                        
+                        <div class="chat-content">
+                            <h6 class="font-medium">{{selectedUser.name}}</h6>
+                            <div class="box bg-light-info">Mensaje de prueba</div>
+                        </div>
+                        <div class="chat-time">10:57 am</div>
+                    </li>
+                    <!--chat Row -->
+                    <li class="odd chat-item">
+                        <div class="chat-content">
+                            <div class="box bg-light-inverse">Mensaje de prueba</div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--chat Row -->
+                    <li class="odd chat-item">
+                        <div class="chat-content">
+                            <div class="box bg-light-inverse">Whats budget of the new project.</div>
+                            <br>
+                        </div>
+                        <div class="chat-time">10:59 am</div>
+                    </li>
+                    <!--chat Row -->
+                    <li class="chat-item">
+                        <div class="chat-img">
+                            <img src="{{selectedUser.avtar}}" alt="user">
+                        </div>
+                        <div class="chat-content">
+                            <h6 class="font-medium">{{selectedUser.name}}</h6>
+                            <div class="box bg-light-info">Well we have good budget for the project</div>
+                        </div>
+                        <div class="chat-time">11:00 am</div>
+                    </li>
+                    <!--chat Row -->
+                </ul>
+            </div>
+        </div>
+        <div class="card-body border-top">
+            <div class="row">
+                <div class="col-9">
+                    <div class="input-field m-t-0 m-b-0">
+                        <input id="textarea1" placeholder="Type and enter" class="form-control border-0" type="text">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <a class="btn-circle btn-lg btn-cyan float-right text-white" href="javascript:void(0)">
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
