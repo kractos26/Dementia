@@ -7,7 +7,9 @@
     </a>
   
     <menu class="items-wrapper">
-      <a href="#"*ngFor="let sidebarnavItem of sidebarnavItems"  [routerLink]="sidebarnavItem.class === '' ? [sidebarnavItem.path] : null" class="menu-item fa fa-home"></a>
+      <a href="#"*ngFor="let sidebarnavItem of sidebarnavItems"  [routerLink]="sidebarnavItem.class === '' ? [sidebarnavItem.path] : null" class="menu-item fa fa-home">
+          
+      </a>
     
     </menu>
   
