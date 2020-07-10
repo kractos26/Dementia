@@ -3,52 +3,24 @@ import { RouteInfo } from './sidebar.metadata';
 export const ROUTES: RouteInfo[] =
     [
       
-      
+
       {
-        path: '',
+        path: '/ecommerce/products',
         title: 'Productos',
         icon: '',
-        class: 'has-arrow',
+        class: '',
         extralink: false,
         submenu: [
-           {
-            path: '/ecommerce/products/1',
-            title: 'Mosaicos',
-            icon: '',
-            class: '',
-            extralink: false,
-            submenu:[],
-            parmeter:{id:1}
-           },
-           {
-            path: '/ecommerce/products/2',
-            title: 'mugs',
-            icon: '',
-            class: '',
-            extralink: false,
-            submenu:[],
-            parmeter:{id:1}
-           }
-          
         ],
         parmeter:{}
       },
       {
-        path: '',
+        path: '/info/QuienesSomos',
         title: 'Informacion General',
         icon: '',
-        class: 'has-arrow',
+        class: '',
         extralink: false,
-        submenu: [
-           {
-            path: '/info/QuienesSomos',
-            title: 'Dementia es',
-            icon: '',
-            class: '',
-            extralink: false,
-            submenu:[],
-            parmeter:{}
-           }
+        submenu: [     
         ],
         parmeter:{}
       }

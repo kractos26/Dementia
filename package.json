@@ -41,6 +41,7 @@
     "angularx-social-login": "^1.2.7",
     "c3": "^0.4.23",
     "chartist": "^0.11.0",
+    "circular-menu": "^1.0.6",
     "cordova-android": "8.0.0",
     "cordova-browser": "^5.0.4",
     "cordova-plugin-camera": "4.0.3",
