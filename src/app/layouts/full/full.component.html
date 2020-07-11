@@ -37,9 +37,7 @@
                             <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
                         </span>
                     </a>
-                    <a (click)="toggleSidebarType()" class="sidebartoggler d-none d-md-block" href="javascript:void(0)" data-sidebartype="mini-sidebar">
-                        <i class="mdi mdi-toggle-switch font-20"></i>
-                    </a>
+                
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -68,7 +66,7 @@
     <aside class="left-sidebar fondonegro" [attr.data-sidebarbg]="options.sidebarbg" (mouseover)="Logo()" (mouseout)="Logo()">
         <br>
         <div class="scroll-sidebar" [perfectScrollbar]="config">
-            <app-sidebar class="distancia"></app-sidebar>
+            <app-sidebar ></app-sidebar>
         </div>
     </aside>
     
@@ -78,7 +76,7 @@
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
-    <div (click)="showMobileMenu = false" class="page-wrapper">
+    <div (click)="showMobileMenu = false" class="page-wrapper distancia">
         
         <!-- ============================================================== -->
         <!-- Container fluid  -->
