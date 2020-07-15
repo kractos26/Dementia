@@ -13,7 +13,7 @@
             <div class="navbar-header" [ngClass]="(expandLogo)?'expand-logo':''" [attr.data-logobg]="options.dark">
                 <!-- This is for the sidebar toggle which is visible on mobile only -->
                 <a (click)="showMobileMenu = !showMobileMenu" class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
-                 
+                   
                 </a>
                 <!-- ============================================================== -->
                 <!-- Logo -->
@@ -24,6 +24,7 @@
                         <b class="logo-icon" >
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
+
                             <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
                             
@@ -55,6 +56,7 @@
             <!-- ============================================================== -->
             <div class="navbar-collapse collapse" id="navbarSupportedContent" [attr.data-navbarbg]="options.navbarbg" [ngbCollapse]="!isCollapsed">
                 <app-navigation class="w-100"></app-navigation>
+                <app-sidebar ></app-sidebar>
             </div>
         </nav>
     </header>
@@ -63,13 +65,8 @@
     <!-- Left Sidebar - style you can find in sidebar.scss  -->
     <!-- ============================================================== -->
     
-    <aside class="left-sidebar fondonegro" [attr.data-sidebarbg]="options.sidebarbg" (mouseover)="Logo()" (mouseout)="Logo()">
-        <br>
-        <div class="scroll-sidebar" [perfectScrollbar]="config">
-            <app-sidebar ></app-sidebar>
-        </div>
-    </aside>
-    
+      
+ 
     <!-- ============================================================== -->
     <!-- End Left Sidebar - style you can find in sidebar.scss  -->
     <!-- ============================================================== -->

@@ -1,35 +1,40 @@
 
-<div  class="row distan" > 
-    <div   *ngFor="let element of elementos"  >
-       <div class="col-md-12 col-xs-12">
-        <div class="id-card-wrapper">
-          <div class="id-card">
-            <div class="row">
-              
-                <div class="col-md-6 col-xs-6" >
-                  <div class="dp-arc-outer"></div>
-                  <div class="dp-arc-inner"></div>
-                  <img src="assets/images/product/img{{element}}.jpg" class="img-fluid"/>
-                </div>
-                <div class="col-md-6 col-xs-6" style="padding-left: 20px;">
-                  <h1>Nombre</h1>
-                      <p>Descripción del articulo 
-                      </p>
-                      <p><button  (click)="detallesProducto()" class="btn btn-info">Detalle</button></p>
-                </div>
-             
-            </div>
-           
-          </div>
-        </div>
-       </div>
-     
-         
-    </div>
+
+<div  class="row distan" *ngFor="let element of productoitems | paginate: { itemsPerPage: 20, currentPage: p }"> 
     
+ 
+      <div class="col-md-4" *ngFor="let item of element" >
+    
+        <div class="card testimonial-card" > 
+
+          <!-- Background color -->
+          <div class="card-up indigo lighten-1"></div>
+        
+          <!-- Avatar -->
+          <div class="avatar mx-auto white">
+            <img src="{{item.img}}" class="rounded-circle"
+              alt="woman avatar">
+          </div>
+        
+          <!-- Content -->
+          <div class="card-body">
+            <!-- Name -->
+            <h4 class="card-title">{{item.Nombre}} {{item.IdProducto}}</h4>
+            <hr>
+            <!-- Quotation -->
+            <p> {{item.Descripcion}} 
+              <button  (click)="detallesProducto()" class="btn btn-info">Detalle</button>
+            </p>
+          </div>
+        
+        </div>
+        <!-- Card -->
+
+    </div>
+    </div>
 
 
-</div>
+<pagination-controls (pageChange)="p =$event"></pagination-controls>
 
 
 

@@ -1,6 +1,6 @@
 .distan 
 {
-    padding-left: 20px;
+  
     padding-top: 20px;
     padding-right: 20px;
 }
@@ -28,6 +28,13 @@ img{
     box-shadow: 0px 0px 3px 1px #12a0a0, inset 0px 0px 3px 1px #12a0a0;
   }
   
+.card {
+  border: 1px solid rgb(97, 245, 245);
+  background-color: #0A2129;
+  color:white;
+  box-shadow: 0px 0px 3px 1px #12a0a0, inset 0px 0px 3px 1px #12a0a0;
+}
+
 
   
   img {
@@ -37,21 +44,6 @@ img{
     box-shadow: 0px 0px 4px 3px #12a0a0;
   }
  
-   .dp-arc-inner {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border: 6px solid transparent;
-    border-top-color: #0AE0DF;
-    border-radius: 50%;
-    top: -6px;
-    left: -6px;
-  
-    animation-duration: 2s;
-    animation-name: rotate-clock;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
   @keyframes rotate-clock {
     from {
       transform: rotate(0deg);
@@ -60,21 +52,7 @@ img{
       transform: rotate(360deg);
     }
   }
-   .dp-arc-outer {
-    position: absolute;
-    width: calc(200px + 20px);
-    height: calc(200px + 20px);
-    border: 6px solid transparent;
-    border-bottom-color: #0AE0DF;
-    border-radius: 50%;
-    top: -16px;
-    left: -16px;
-  
-    animation-duration: 2s;
-    animation-name: rotate-anticlock;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
+   
 
   @keyframes rotate-anticlock {
     from {

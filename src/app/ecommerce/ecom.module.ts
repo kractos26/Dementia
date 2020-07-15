@@ -13,10 +13,11 @@ import { EditComponent } from './edit/edit.component';
 import { OrderComponent } from './orders/orders.component';
 import { ProductComponent } from './product/product.component';
 import { UtilidadesModule } from '../utilidades/utilidades.module';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(EcomRoutes), FormsModule, NgbModule,
-    UtilidadesModule
+    UtilidadesModule,
+    NgxPaginationModule
   ],
   declarations: [
     CartComponent,
@@ -25,6 +26,7 @@ import { UtilidadesModule } from '../utilidades/utilidades.module';
     EditComponent,
     OrderComponent,
     ProductComponent
+    
   ]
 })
 export class EcomModule {}

@@ -58,6 +58,7 @@
               "./src/assets/vendor/sparkline.js",
               "./src/assets/vendor/actionextern.js",
               "node_modules/moment/min/moment.min.js"
+              
             ],
             "es5BrowserSupport": true
           },

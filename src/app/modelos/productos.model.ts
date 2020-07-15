@@ -6,4 +6,5 @@ export class Producto
     img:string
     tipo:string
 
+
 }
